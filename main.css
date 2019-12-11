@@ -1,0 +1,205 @@
+body {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.container {
+  max-width: 930px;
+  background-color: white;
+  padding: 10px;
+  margin: auto;
+}
+
+.form-row {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  padding-right: 10px;
+  padding-bottom: 8px;
+  font-size: 17px;
+  color: #554344;
+  line-height: 1.41;
+  letter-spacing: normal;
+}
+
+.form-row input {
+  height: 40px;
+  border: 1px solid #b3b1a8;
+  font-size: 17px;
+  color: #554344;
+}
+
+.form-row select {
+  height: 40px;
+  border: 1px solid #b3b1a8;
+  background-color: white;
+  font-size: 17px;
+  color: #554344;
+  padding: 1px 7px;
+}
+
+.form-row textarea {
+  height: 112px;
+  border: 1px solid #b3b1a8;
+  font-size: 17px;
+  color: #554344;
+}
+
+@media all and (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+
+  .form-row label {
+    flex-basis: 120px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+/* example #2 */
+.column-layout {
+  max-width: 1024px;
+  background-color: white;
+  /* padding: 10px; */
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-column {
+  flex: 3;
+  order: 2;
+}
+
+.sidebar-one {
+  flex: 1;
+  order: 1;
+}
+
+.sidebar-two {
+  flex: 1;
+  order: 2;
+}
+
+@media all and (min-width: 600px) {
+  .column-layout {
+    flex-direction: row;
+  }
+  .main-column {
+    margin: 0 0;
+  }
+}
+
+/* example #3 Adding Margins */
+
+.call-out-container {
+  max-width: 1124px;
+  margin: 40px auto 0 auto;
+}
+
+.call-out {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  flex-basis: 30%;
+}
+
+@media (min-width: 900px) {
+  .call-out-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.call-out:nth-child(1) {
+  background-color: bisque;
+}
+.call-out:nth-child(2) {
+  background-color: aquamarine;
+}
+.call-out:nth-child(3) {
+  background-color: cadetblue;
+}
+
+/* example #4 Multiple Row Item  */
+.fixed-size-container {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+  background-color: white;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fixed-size {
+  width: 150px;
+  height: 100px;
+  background-color: #990b47;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+/* example #5 Simple Centering */
+.banner {
+  max-width: 700px;
+  height: 400px;
+  background-color: antiquewhite;
+  padding: 30px 0;
+  margin: 40px auto 0 auto;
+  display: flex;
+}
+
+.center-me {
+  font-size: 40px;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* example #6 Columns AND Rows */
+.equal-height-container {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  display: flex;
+}
+
+.first {
+  background-color: white;
+  padding: 20px;
+  flex: 1;
+}
+
+.second {
+  background-color: yellow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-a {
+  background-color: bisque;
+  flex: 1;
+}
+
+.second-b {
+  background-color: aquamarine;
+  flex: 1;
+}
