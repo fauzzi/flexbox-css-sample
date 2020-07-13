@@ -204,3 +204,19 @@ body {
   background-color: aquamarine;
   flex: 1;
 }
+
+.wrap-container {
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background-color: #990b47;
+}
+
+.wrap-container div {
+  background-color: aliceblue;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  font-size: 50px;
+}
